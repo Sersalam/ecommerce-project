@@ -1,3 +1,7 @@
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
 .product_title {
     font-size: 30px;
     text-transform: uppercase;
@@ -8,6 +12,8 @@
 
 .product_text {
     padding-right: 20px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .product-desc {
@@ -17,5 +23,5 @@
 }
 
 <body> {
-    background: #red;
+    background: red;
 }
