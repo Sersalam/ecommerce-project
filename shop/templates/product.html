@@ -10,22 +10,23 @@
   <div class="container py-5">
   	<div class="row mt-5">
   	  <div class="col-10 mx-auto col-md-6 my-3">
-  	  	<img width="100%" src="{% static 'images/t17+.jpeg' %}">
+  	  	<img width="100%" src="{{ product.image.url }}">
 	  </div>
   	</div>
   </div>
   <div class="col-10 mx-auto col-md-6 my-3">
   	<div>
-	  <h1 class="product_title text-center">Antminer T17+</h1>
+	  <h1 class="product_title text-center">{{ product.name }}</h1>
 	  <h5 class="text-info fst-italic mb-4 text-center">
-        $2999
+        ${{ product.price }}
 	  </h5>
 	  <p class="product_desc text-center">Product Description</p>
-	  <p class="product_text">
-	  	The Bitmain Antminer T17+ was released alongside its counterpart, the Antminer S17+. The S17+ has a hash rate of 73 TH/s and works with a power efficiency of 40 J/TH + 10%; the T17+ computes at a hash rate of 64 TH/s and power efficiency 50 J/TH. The miner's hash rate is quite impressive as it shows the company's promise to produce miners that are at the forefront of mining innovation. The Antminer T17+ was regarded as the future of its rig design at the time of release.
-	  	<br><br>
-	    The Antminer T17+ is a mighty Bitcoin miner, with a considerable improvement in mining hash rate and power efficiency.</p>
+	  <p class="product_text">{{ product.description }}</p>
+	  {% if product.stock <= 0 %}
 	  <p class="product_text fw-bold text-center">Out of Stock</p>
+	  {% else %}
+	  <a href="">Add To Cart</a>
+	  {% endif %}
   	</div>
   </div>
 {% endblock %}

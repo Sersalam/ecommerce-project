@@ -7,14 +7,14 @@
 {% endblock %}
 
 {% block content %}
-  <img width="100%" src="{% static 'images/ASICs.jpeg' %}" >
+  <img width="100%" src="{% static 'images/logo.png' %}" >
   <!-- <div class="container-fluid">
     <div class="row">
-      <img src="{% static 'ASICs.jpeg' %}">
+      <img class="p-0" src="{% static 'images/logo.png' %}">
   	</div>
   </div> -->
 
-  <div class="py-4">
+  <div class="py-2 mb-5 bg-dark text-light">
       <div class="container">
         <div class="row">
           <div class="col-10 mx-auto my-2 text-center">
@@ -32,7 +32,7 @@
           <div class="col-9 mx-auto col-md-6 col-lg-3">
             <div class="card mb-5">
               <div class="p-4">
-                <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                <a href="{{ product.get_url }}"><img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}"></a>
               </div>
 
               <div class="card-footer d-flex justify-content-between" style="background: transparent; border-color: transparent;">
