@@ -22,11 +22,17 @@
 	  </h5>
 	  <p class="product_desc text-center">Product Description</p>
 	  <p class="product_text">{{ product.description }}</p>
+
 	  {% if product.stock <= 0 %}
+
 	  <p class="product_text fw-bold text-center">Out of Stock</p>
+
 	  {% else %}
-	  <a href="">Add To Cart</a>
+
+	  <a href="{% url 'add_cart' product.id %}">Add To Cart</a>
+
 	  {% endif %}
+
   	</div>
   </div>
 {% endblock %}
